@@ -295,7 +295,7 @@ const RegisterForm = ({setCount, setFormData}) => {
           />
           <Box sx={{ minWidth: 120, width: { xs: '100%', md: '48%' } }}>
             <FormControl fullWidth error={!!formErrors.state}>
-              <InputLabel id="demo-simple-select-label">state</InputLabel>
+              <InputLabel id="demo-simple-select-label">State</InputLabel>
               <Select
                 labelId="demo-simple-select-label"
                 id="demo-simple-select"
