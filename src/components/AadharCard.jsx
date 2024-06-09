@@ -1,9 +1,10 @@
 import React,{useState} from 'react';
 import { Modal, Box, Typography, Avatar, Grid } from '@mui/material';
+import { RxCross1 } from "react-icons/rx";
 
 let counter = 0;
 
-const AadharCard = ({open}) => {
+const AadharCard = ({open, setOpen}) => {
   const {show, data : user} = open
   const [profile, setProfile] = useState()
 
@@ -20,9 +21,16 @@ const AadharCard = ({open}) => {
 
   return (
     <>
-        <Typography variant="h5" component="h2" sx={{ mb: 2, fontWeight: 'bold', color: '#0a3d62' }}>
-          Aadhar Card
+        <Box
+           sx={{ mb: 2, fontWeight: 'bold', color: '#0a3d62', display:'flex', justifyContent:'space-between' }}
+        >
+        <Typography variant="h5" component="h2">
+           Aadhar Card 
         </Typography>
+        <Typography variant="h5" component="h2" onClick={()=>setOpen({show:false, data:{}})}>
+           <RxCross1 />
+        </Typography>
+        </Box>
         <Box
            sx={{
                display:"flex",

@@ -330,7 +330,7 @@ const RegisterForm = ({setCount, setFormData}) => {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <AadharCard open={open}/>
+          <AadharCard open={open} setOpen={setOpen}/>
         </Box>
     </Modal>
      </>
